@@ -30,13 +30,13 @@ def get_tall_walls(wall_height):
     walls = DB.FilteredElementCollector(doc) \
               .WherePasses(param_filter) \
               .ToElementIds()
-    return walls
+    return uidoc.Selection.SetElementIds(walls)
 
 # uidoc.Selection.SetElementIds(walls)
 
 # for timing----------------------------------------------
 end_time = timer.get_time()
-print(endtime)
+print(end_time)
 #----------------------------------------------------------
 
 # print(height_param_id)
